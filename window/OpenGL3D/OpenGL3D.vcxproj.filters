@@ -15,20 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\opengleviroment\src\glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="testTexture.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="shader.vs">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="shader.fs">
-      <Filter>资源文件</Filter>
-    </None>
+    <None Include="shader.fs" />
+    <None Include="shader.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -37,5 +25,13 @@
     <ClInclude Include="stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\opengleviroment\src\glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
