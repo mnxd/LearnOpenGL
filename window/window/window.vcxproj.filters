@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testWindow.cpp">
+    <ClCompile Include="..\..\opengleviroment\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\opengleviroment\src\glad.c">
+    <ClCompile Include="testWindow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
