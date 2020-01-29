@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{49893275-0A67-4967-8D34-97ACC8AACC37}</ProjectGuid>
-    <RootNamespace>OpenGLTriangle</RootNamespace>
+    <ProjectGuid>{DFB2198A-AC15-4244-B8AF-CFF0B81F2B21}</ProjectGuid>
+    <RootNamespace>OpenGLLight</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,7 +69,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -143,11 +150,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\window\testTriangle.cpp" />
+    <ClCompile Include="testLight.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lamp.fs" />
+    <None Include="lamp.vs" />
+    <None Include="Lighting.fs" />
+    <None Include="Lighting.vs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GLAD\GLAD.vcxproj">
       <Project>{53389dc7-4942-49c3-b7b9-4b77a9eaded9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\STB_IMAGE\STB_IMAGE.vcxproj">
+      <Project>{0a89194b-7a2f-4d58-aa8a-dc052b9c6bf0}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
