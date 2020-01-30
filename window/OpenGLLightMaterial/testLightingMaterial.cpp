@@ -36,7 +36,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "TestLight", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Test Lighting Material", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -49,7 +49,7 @@ int main()
 	glfwSetScrollCallback(window, scrooll_callback);
 
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-	
+
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize GLAD" << std::endl;
@@ -58,8 +58,8 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 
 
-	Shader lightingShader("Lighting.vs", "Lighting.fs");
-	Shader lampShader("lamp.vs","lamp.fs");
+	Shader lightingShader("material.vs", "material.fs");
+	Shader lampShader("lamp.vs", "lamp.fs");
 
 	float vertices[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -140,14 +140,31 @@ int main()
 
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		lightPos.x = 1.0f + sin(glfwGetTime())*2.0f;
-		lightPos.y = sin(glfwGetTime() / 2.0f)*1.0f;
-
+		//lightPos.x = 1.0f + sin(glfwGetTime())*2.0f;
+		//lightPos.y = sin(glfwGetTime() / 2.0f)*1.0f;
 		lightingShader.use();
-		lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-		lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-		lightingShader.setVec3("lightPos", lightPos);
+		lightingShader.setVec3("light.position", lightPos);
 		lightingShader.setVec3("viewPos", camera.Position);
+
+		glm::vec3 lightColor;
+		lightColor.x = sin(glfwGetTime() * 2.0f);
+		lightColor.y = sin(glfwGetTime() * 0.7f);
+		lightColor.z = sin(glfwGetTime() * 1.3f);
+
+		glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f); // 降低影响
+		glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // 很低的影响
+
+		lightingShader.setVec3("light.ambient", ambientColor);
+		lightingShader.setVec3("light.diffuse", diffuseColor);
+		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+		//lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
+		//lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f); // 将光照调暗了一些以搭配场景
+		//lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+
+		lightingShader.setVec3("material.ambient", 0.19225, 0.19225, 0.19225);
+		lightingShader.setVec3("material.diffuse", 0.50754, 0.50754, 0.50754);
+		lightingShader.setVec3("material.specular", 0.508273, 0.508273, 0.508273);
+		lightingShader.setFloat("material.shininess", 0.4 * 128);
 
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
