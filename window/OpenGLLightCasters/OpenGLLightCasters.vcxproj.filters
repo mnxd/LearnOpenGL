@@ -15,14 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestLightingMaps.cpp">
+    <ClCompile Include="TestLightCasters.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lamp.fs" />
     <None Include="lamp.vs" />
-    <None Include="LightingMaps.vs" />
-    <None Include="LightingMaps.fs" />
+    <None Include="lamp.fs" />
+    <None Include="directionLight.vs" />
+    <None Include="directionLight.fs" />
+    <None Include="pointLight.vs" />
+    <None Include="pointLight.fs" />
   </ItemGroup>
 </Project>
