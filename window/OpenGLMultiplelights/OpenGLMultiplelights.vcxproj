@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{635B8021-7112-43BA-9736-8FE30E774226}</ProjectGuid>
-    <RootNamespace>OpenGLLightCasters</RootNamespace>
+    <ProjectGuid>{B71D803C-AB64-4BBD-8BD9-7FDEE5ACE7A8}</ProjectGuid>
+    <RootNamespace>OpenGLMultiplelights</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,17 +139,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestLightCasters.cpp" />
+    <ClCompile Include="testMultiplelights.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="directionLight.fs" />
-    <None Include="directionLight.vs" />
     <None Include="lamp.fs" />
     <None Include="lamp.vs" />
-    <None Include="pointLight.fs" />
-    <None Include="pointLight.vs" />
-    <None Include="spotLight.fs" />
-    <None Include="spotLight.vs" />
+    <None Include="MultipleLight.fs" />
+    <None Include="MultipleLight.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
