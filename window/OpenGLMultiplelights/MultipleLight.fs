@@ -17,6 +17,7 @@ struct DirectionLight {
 
 struct PointLight {
 	 vec3  position;
+	 vec3 color;
 	 vec3 ambient;
 	 vec3 diffuse;
 	 vec3 specular;
@@ -99,7 +100,7 @@ vec3 caculPointLight(PointLight light,vec3 normal,vec3 fragPos,vec3 viewDir)
     // diffuse 
     vec3 lightDir     = normalize(light.position - fragPos);
     float diff        = max(dot(normal, lightDir), 0.0);
-    vec3 diffuse      = light.diffuse * diff * texture(material.diffuse, TexCoords).rgb;  
+    vec3 diffuse      = light.diffuse * diff * (texture(material.diffuse, TexCoords).rgb + light.color);  
     
     // specular
     vec3 reflectDir   = reflect(-lightDir, normal);  

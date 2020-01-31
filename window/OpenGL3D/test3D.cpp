@@ -10,6 +10,7 @@
 #include <glad/glad.h>
 #include <iostream>
 
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void __processInput(GLFWwindow *window);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
