@@ -43,6 +43,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLBlending", "OpenGLBle
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLFrameBuffer", "OpenGLFrameBuffer\OpenGLFrameBuffer.vcxproj", "{49397566-A69E-4AD8-9A8D-A1CE9DBA2212}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLCubeMap", "OpenGLCubeMap\OpenGLCubeMap.vcxproj", "{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLEnvironmentMap", "OpenGLEnvironmentMap\OpenGLEnvironmentMap.vcxproj", "{5D7E356A-636B-4514-A090-A70CAC378E78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +215,22 @@ Global
 		{49397566-A69E-4AD8-9A8D-A1CE9DBA2212}.Release|x64.Build.0 = Release|x64
 		{49397566-A69E-4AD8-9A8D-A1CE9DBA2212}.Release|x86.ActiveCfg = Release|Win32
 		{49397566-A69E-4AD8-9A8D-A1CE9DBA2212}.Release|x86.Build.0 = Release|Win32
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Debug|x64.ActiveCfg = Debug|x64
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Debug|x64.Build.0 = Debug|x64
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Debug|x86.Build.0 = Debug|Win32
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Release|x64.ActiveCfg = Release|x64
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Release|x64.Build.0 = Release|x64
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Release|x86.ActiveCfg = Release|Win32
+		{44AB80EB-4EAB-499C-A54E-A1FC45DC6AA8}.Release|x86.Build.0 = Release|Win32
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Debug|x64.ActiveCfg = Debug|x64
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Debug|x64.Build.0 = Debug|x64
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Debug|x86.ActiveCfg = Debug|Win32
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Debug|x86.Build.0 = Debug|Win32
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Release|x64.ActiveCfg = Release|x64
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Release|x64.Build.0 = Release|x64
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Release|x86.ActiveCfg = Release|Win32
+		{5D7E356A-636B-4514-A090-A70CAC378E78}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
