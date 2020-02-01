@@ -146,6 +146,7 @@
     <None Include="lamp.vs" />
     <None Include="modelloading.fs" />
     <None Include="modelloading.vs" />
+    <None Include="stencilColor.fs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

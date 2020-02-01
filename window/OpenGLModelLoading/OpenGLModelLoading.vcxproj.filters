@@ -24,5 +24,6 @@
     <None Include="modelloading.fs" />
     <None Include="lamp.fs" />
     <None Include="lamp.vs" />
+    <None Include="stencilColor.fs" />
   </ItemGroup>
 </Project>

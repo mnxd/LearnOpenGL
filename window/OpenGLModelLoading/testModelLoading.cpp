@@ -54,9 +54,15 @@ int main()
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1;
 	}
+
 	glEnable(GL_DEPTH_TEST);
+	glDepthMask(GL_LESS);
+	glEnable(GL_STENCIL_TEST);
+	glStencilFunc(GL_ALWAYS, 1, 0xFF);
+	glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 
 	Shader ourShader("modelloading.vs", "modelloading.fs");
+	Shader stencilShader("modelloading.vs", "stencilColor.fs");
 	Shader lampShader("lamp.vs", "lamp.fs");
 
 	Model ourModel("../resource/objects/nanosuit/nanosuit.obj");
@@ -128,9 +134,11 @@ int main()
 		processInput(window);
 
 		glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+
 		lightPos.x = 1.0f + sin(glfwGetTime())*2.0f;
 		lightPos.y = sin(glfwGetTime() / 2.0f)*1.0f;
+
 
 		ourShader.use();
 		ourShader.setVec3("light.position", lightPos);
@@ -155,14 +163,33 @@ int main()
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	
 		ourShader.setMat4("model", model);
 		
+		glStencilFunc(GL_ALWAYS, 1, 0xFF);
+		glStencilMask(0xFF);
 		ourModel.Draw(ourShader);
 
+
+		stencilShader.use();
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.202f, 0.202f, 0.202f));
+		stencilShader.setMat4("projection", projection);
+		stencilShader.setMat4("view", view);
+		stencilShader.setMat4("model", model);
+		glStencilFunc(GL_NOTEQUAL, 1, 0xFF);
+		glStencilMask(0x00);
+		glDisable(GL_DEPTH_TEST);
+		ourModel.Draw(stencilShader);
+		glStencilMask(0xFF);
+		glEnable(GL_DEPTH_TEST);
+
+		glStencilFunc(GL_ALWAYS, 1, 0xFF);
+		glStencilMask(0xFF);
 		lampShader.use();
 		lampShader.setMat4("projection", projection);
 		lampShader.setMat4("view", view);
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, lightPos);
-		model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+		model = glm::scale(model, glm::vec3(0.2f));
 		lampShader.setMat4("model", model);
 		glBindVertexArray(lightVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
