@@ -81,15 +81,13 @@ int main()
 	// -------------------------
 	Shader shader("blendingTest.vs", "blendingTest.fs");
 
-	/*
-	Remember: to specify vertices in a counter-clockwise winding order you need to visualize the triangle
-	as if you're in front of the triangle and from that point of view, is where you set their order.
+	/*记住:要指定逆时针缠绕顺序的顶点，你需要可视化三角形
+	就好像你在三角形的前面，从那个角度来看，就是你设置它们的顺序的地方。
 
-	To define the order of a triangle on the right side of the cube for example, you'd imagine yourself looking
-	straight at the right side of the cube, and then visualize the triangle and make sure their order is specified
-	in a counter-clockwise order. This takes some practice, but try visualizing this yourself and see that this
-	is correct.
-*/
+	例如，要定义立方体右侧三角形的顺序，您可以想象自己正在查看
+	在立方体的右侧笔直，然后可视化三角形，并确保指定了它们的顺序
+	以逆时针的顺序。 这需要一些练习，但是试着把它形象化，然后看到
+	是正确的。*/
 
 	float cubeVertices[] = {
 		// Back face
