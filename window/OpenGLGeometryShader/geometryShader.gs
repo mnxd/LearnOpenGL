@@ -2,12 +2,6 @@
 layout (points) in;
 layout (triangle_strip, max_vertices = 5) out;
 
-//void main() {    
-//    gl_Position = gl_in[0].gl_Position; 
-//    EmitVertex();
-//    EndPrimitive();
-//}
-
 in VS_OUT {
     vec3 color;
 } gs_in[];
