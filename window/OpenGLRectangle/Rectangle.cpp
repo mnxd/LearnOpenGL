@@ -15,7 +15,10 @@ const char *fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
 "void main()\n"
 "{\n"
+"	if(gl_FragCoord.x <400)\n"
 "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"	else \n"
+"	 FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
 "}\n\0";
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -95,7 +98,7 @@ int main ()
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
