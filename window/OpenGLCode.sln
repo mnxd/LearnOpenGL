@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLNormalVisualization",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLInstance", "OpenGLInstance\OpenGLInstance.vcxproj", "{54124611-E4A8-4024-A0E6-F10EE3FBA79A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLInstanceRock", "OpenGLInstanceRock\OpenGLInstanceRock.vcxproj", "{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +283,14 @@ Global
 		{54124611-E4A8-4024-A0E6-F10EE3FBA79A}.Release|x64.Build.0 = Release|x64
 		{54124611-E4A8-4024-A0E6-F10EE3FBA79A}.Release|x86.ActiveCfg = Release|Win32
 		{54124611-E4A8-4024-A0E6-F10EE3FBA79A}.Release|x86.Build.0 = Release|Win32
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Debug|x64.ActiveCfg = Debug|x64
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Debug|x64.Build.0 = Debug|x64
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Debug|x86.ActiveCfg = Debug|Win32
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Debug|x86.Build.0 = Debug|Win32
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Release|x64.ActiveCfg = Release|x64
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Release|x64.Build.0 = Release|x64
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Release|x86.ActiveCfg = Release|Win32
+		{38FEE701-B0CE-4A48-80B2-B92EA58CECB7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
