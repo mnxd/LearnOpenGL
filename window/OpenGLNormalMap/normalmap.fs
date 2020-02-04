@@ -19,7 +19,6 @@ void main()
     vec3 normal = texture(normalMap, fs_in.TexCoords).rgb;
     normal = normalize(normal * 2.0 - 1.0); 
 
-
     vec3 color = texture(diffuseMap, fs_in.TexCoords).rgb;
     // Ambient
     vec3 ambient = 0.1 * color;
