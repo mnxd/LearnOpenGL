@@ -43,7 +43,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Shadow Map", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -127,7 +127,7 @@ int main()
 	debugDepthQuad.setInt("depthMap", 0);
 
 	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
-
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	while (!glfwWindowShouldClose(window))
 	{
 		float currentFrame = glfwGetTime();
@@ -188,15 +188,12 @@ int main()
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
-
 	glDeleteVertexArrays(1, &planeVAO);
 	glDeleteBuffers(1, &planeVBO);
-
 
 	glfwTerminate();
 	return 0;
 }
-
 
 void renderScene(const Shader &shader)
 {
