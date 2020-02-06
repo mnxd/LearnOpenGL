@@ -75,6 +75,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLParallaxMap", "OpenGL
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLHDR", "OpenGLHDR\OpenGLHDR.vcxproj", "{C7F2C15C-171F-4076-BC3F-3DDC4A2C1E87}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLBloom", "OpenGLBloom\OpenGLBloom.vcxproj", "{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -371,6 +373,14 @@ Global
 		{C7F2C15C-171F-4076-BC3F-3DDC4A2C1E87}.Release|x64.Build.0 = Release|x64
 		{C7F2C15C-171F-4076-BC3F-3DDC4A2C1E87}.Release|x86.ActiveCfg = Release|Win32
 		{C7F2C15C-171F-4076-BC3F-3DDC4A2C1E87}.Release|x86.Build.0 = Release|Win32
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Debug|x64.ActiveCfg = Debug|x64
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Debug|x64.Build.0 = Debug|x64
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Debug|x86.ActiveCfg = Debug|Win32
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Debug|x86.Build.0 = Debug|Win32
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Release|x64.ActiveCfg = Release|x64
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Release|x64.Build.0 = Release|x64
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Release|x86.ActiveCfg = Release|Win32
+		{52E2CBA7-1A42-4433-A08E-1CFC16E974DC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
