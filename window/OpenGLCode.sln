@@ -81,6 +81,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLDeferredShading", "Op
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLSSAO", "OpenGLSSAO\OpenGLSSAO.vcxproj", "{02E88268-A829-4C66-8D3B-4748CFF88825}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLPBRLighting", "OpenGLPBRLighting\OpenGLPBRLighting.vcxproj", "{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -401,6 +403,14 @@ Global
 		{02E88268-A829-4C66-8D3B-4748CFF88825}.Release|x64.Build.0 = Release|x64
 		{02E88268-A829-4C66-8D3B-4748CFF88825}.Release|x86.ActiveCfg = Release|Win32
 		{02E88268-A829-4C66-8D3B-4748CFF88825}.Release|x86.Build.0 = Release|Win32
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Debug|x64.ActiveCfg = Debug|x64
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Debug|x64.Build.0 = Debug|x64
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Debug|x86.ActiveCfg = Debug|Win32
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Debug|x86.Build.0 = Debug|Win32
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Release|x64.ActiveCfg = Release|x64
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Release|x64.Build.0 = Release|x64
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Release|x86.ActiveCfg = Release|Win32
+		{71683BB8-D2C5-4DA8-A0C6-C184F5574C89}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
