@@ -97,7 +97,7 @@ int main()
 		//	std::string index;
 		//	ss << i;
 		//	index = ss.str();
-		//	instanceShader.setVec2(("offsets[" + index + "]").c_str(), translations[i]);
+		//	instanceShader.setVec2(("offsets[" + index + "]" , translations[i]);
 		//}
 
 		glBindVertexArray(VAO);

@@ -85,6 +85,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLPBRLighting", "OpenGL
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLIBL", "OpenGLIBL\OpenGLIBL.vcxproj", "{C9BFF124-29D6-4E99-824A-DBF761002B0C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLIBLSpecular", "OpenGLIBLSpecular\OpenGLIBLSpecular.vcxproj", "{C77B0392-7AED-498E-A417-33E80A86900B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -421,6 +423,14 @@ Global
 		{C9BFF124-29D6-4E99-824A-DBF761002B0C}.Release|x64.Build.0 = Release|x64
 		{C9BFF124-29D6-4E99-824A-DBF761002B0C}.Release|x86.ActiveCfg = Release|Win32
 		{C9BFF124-29D6-4E99-824A-DBF761002B0C}.Release|x86.Build.0 = Release|Win32
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Debug|x64.ActiveCfg = Debug|x64
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Debug|x64.Build.0 = Debug|x64
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Debug|x86.ActiveCfg = Debug|Win32
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Debug|x86.Build.0 = Debug|Win32
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Release|x64.ActiveCfg = Release|x64
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Release|x64.Build.0 = Release|x64
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Release|x86.ActiveCfg = Release|Win32
+		{C77B0392-7AED-498E-A417-33E80A86900B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
